@@ -21,7 +21,9 @@
           workbench.colorTheme = "Visual Studio 2019 Dark";
           workbench.iconTheme = "material-icon-theme";
           editor.minimap.enabled = false;
+          editor.cursorSmoothCaretAnimation = "on";
           workbench.editor.empty.hint = "hidden";
+          window.autoDetectColorScheme = true;
           git.enableSmartCommit = true;
           git.autofetch = true;
           git.confirmSync = false;

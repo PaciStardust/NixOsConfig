@@ -14,14 +14,11 @@
 
   outputs =
   {
-    self,
     nixpkgs,
-    lanzaboote,
     home-manager,
     ...
   } @ inputs:
   let
-    system = "x86_64-linux";
   in
   {
     nixosConfigurations.sirius-nixos = nixpkgs.lib.nixosSystem {

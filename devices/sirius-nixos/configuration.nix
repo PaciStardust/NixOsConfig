@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports =
@@ -8,6 +8,7 @@
     ../../utils/secure-boot.nix
     ../../programs/vscode.nix
     ../../programs/git.nix
+    ../../programs/firefox.nix
   ];
 
   networking.hostName = "sirius-nixos";
@@ -22,9 +23,6 @@
     #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

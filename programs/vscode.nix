@@ -19,6 +19,7 @@
             "-workbench.action.quickOpenView"
           ];
           workbench.colorTheme = "Visual Studio 2019 Dark";
+          workbench.preferredLightColorTheme = "Quiet Light";
           workbench.iconTheme = "material-icon-theme";
           editor.minimap.enabled = false;
           editor.cursorSmoothCaretAnimation = "on";

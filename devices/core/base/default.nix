@@ -50,20 +50,40 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    bluez
     cron
     curl
+    clamav
+    dnsmasq
+    docker
+    docker-compose
     fd
     fzf
     git
     htop
+    less
+    libosinfo
     man-db
     man-pages
+    microcode-amd
     neovim
     p7zip
+    powertop
+    power-profiles-daemon
+    rsync
     screen
     wget
+    wireguard-tools 
     zoxide
   ];
+
+  # TuneD for power management
+  services.tuned.enable = true;
+
+  powerManagement.powertop = {
+    enable = true;
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -77,6 +97,25 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    banner = "Mrow?";
+    ports = [
+      13579
+    ];
+
+    settings = {
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+    };
+  };
+
+  services.fail2ban = {
+    enable = true;
+    bantime-increment = {
+      enable = true;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

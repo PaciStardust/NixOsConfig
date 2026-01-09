@@ -1,4 +1,7 @@
-{ ... }: {
+{ 
+  pkgs,
+  ...
+ }:{
   imports =
   [
     ../base
@@ -32,6 +35,25 @@
     #media-session.enable = true;
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true;
+        FastConnectable = false;
+      };
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
+  
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    clamtk
+    noto-fonts
+  ];
 }

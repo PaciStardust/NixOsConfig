@@ -4,6 +4,7 @@
   [ 
     ../core/desktop
     ./hardware-configuration.nix
+    ../../programs
   ];
 
   networking.hostName = "sirius-nixos";

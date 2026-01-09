@@ -49,13 +49,20 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    p7zip
+    cron
+    curl
+    fd
+    fzf
     git
-    # wget
+    htop
+    man-db
+    man-pages
+    neovim
+    p7zip
+    screen
+    wget
+    zoxide
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

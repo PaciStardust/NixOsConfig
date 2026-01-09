@@ -5,16 +5,16 @@
 }:
 let
   COLOR_MAIN_LIGHT = "81";
-  COLOR_MAIN = "75";
-  COLOR_MAIN_DARK = "69";
-  COLOR_MAIN_DARKER = "68";
+  #COLOR_MAIN = "75";
+  #COLOR_MAIN_DARK = "69";
+  #COLOR_MAIN_DARKER = "68";
 
   COLOR_ALT_LIGHT = "141";
-  COLOR_ALT = "135";
-  COLOR_ALT_DARK = "99";
+  #COLOR_ALT = "135";
+  #COLOR_ALT_DARK = "99";
   COLOR_ALT_DARKER = "97";
 
-  COLOR_OK = "119";
+  #COLOR_OK = "119";
   COLOR_WARN = "221";
 in{
   programs.zsh.enable = true;
@@ -31,9 +31,7 @@ in{
 
     home.packages = with pkgs; [
       zsh-powerlevel10k
-      fzf
       zsh-fzf-tab
-      fd
     ];
   };
 
@@ -47,6 +45,7 @@ in{
       cls = "clear";
       clr = "clear";
       cat = "bat";
+      cd = "z";
     };
 
     history = {
@@ -146,6 +145,9 @@ in{
         # zstyle ':fzf-tab:*' popup-min-size 64 16
 
         enable-fzf-tab
+
+        # Zoxide
+        eval "$(zoxide init zsh)"
       '';
       initLastToRun = lib.mkOrder 1500 ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

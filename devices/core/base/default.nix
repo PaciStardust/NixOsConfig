@@ -1,4 +1,10 @@
 { pkgs, ... }: {
+  imports = [
+    ./secure-boot.nix
+    ./user-paci.nix
+    ../../../programs/essentials/cli
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

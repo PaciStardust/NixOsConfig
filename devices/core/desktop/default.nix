@@ -56,4 +56,7 @@
     clamtk
     noto-fonts
   ];
+
+  # Enable bitmap font rendering (icons aka emojis)
+  fonts.fontconfig.useEmbeddedBitmaps = true;
 }

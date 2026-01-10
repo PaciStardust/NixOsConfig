@@ -27,6 +27,8 @@
     kdePackages.korganizer
     kdePackages.ksystemlog
     kdePackages.ktimer
+    kdePackages.kwallet
+    kdePackages.kwalletmanager
     kdePackages.partitionmanager
   ];
 }

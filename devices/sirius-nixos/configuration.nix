@@ -1,5 +1,6 @@
-{ ... }:
 {
+  ... 
+}:{
   imports =
   [ 
     ../core/desktop
@@ -8,6 +9,9 @@
   ];
 
   networking.hostName = "sirius-nixos";
+  # Load KMS early like arch
+  boot.initrd.kernelModules = [ "amdgpu" ];
+  boot.kernelModules = [ "amdgpu" ];
 
   system.stateVersion = "25.11"; # Did you read the comment?
 

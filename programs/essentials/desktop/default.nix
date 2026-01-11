@@ -12,5 +12,6 @@
     ./vlc.nix
     ./krita.nix
     ./obsidian.nix
+    ./tuta.nix
   ];
 }

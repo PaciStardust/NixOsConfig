@@ -22,6 +22,7 @@
         workbench.iconTheme = "material-icon-theme";
         editor.minimap.enabled = false;
         editor.cursorSmoothCaretAnimation = "on";
+        editor.fontFamily = "'JetBrains Mono'";
         workbench.editor.empty.hint = "hidden";
         window.autoDetectColorScheme = true;
         git.enableSmartCommit = true;
@@ -63,6 +64,7 @@
         discord.lowerDetailsEditing = "Working on: {workspace}";
         discord.detailsEditing = "Editing {file_name} ({total_lines} lines)";
         chat.disableAIFeatures = true;
+        terminal.integrated.fontFamily = "Jetbrains Mono";
       };
 
       extensions =

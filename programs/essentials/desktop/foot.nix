@@ -6,6 +6,7 @@
 
     settings = {
       colors.alpha = 0.75;
+      main.font = "JetBrainsMono:size=10";
     };
   };
 }

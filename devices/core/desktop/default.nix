@@ -1,7 +1,7 @@
 { 
   pkgs,
   ...
- }:{
+}:{
   imports =
   [
     ../base
@@ -49,14 +49,26 @@
     };
   };
   
+  # Load Mesa
+  hardware.graphics.enable = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
   environment.systemPackages = with pkgs; [
     clamtk
     noto-fonts
+    jetbrains-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   # Enable bitmap font rendering (icons aka emojis)
   fonts.fontconfig.useEmbeddedBitmaps = true;
+  fonts.fontconfig.enable = true;
+
+  systemd.tmpfiles.settings."shared_wallpapers"."/home/shared/wallpapers".d = {
+    group = "shareedit";
+    mode = "0775";
+    user = "root";
+  };
 }

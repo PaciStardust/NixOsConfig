@@ -6,7 +6,7 @@
   users.users.paci = {
     isNormalUser = true;
     description = "Paci Stardust";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "shareedit" ];
     #packages = with pkgs; [];
   };
 }

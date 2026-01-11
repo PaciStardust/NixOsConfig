@@ -5,16 +5,16 @@
 }:
 let
   COLOR_MAIN_LIGHT = "81";
-  #COLOR_MAIN = "75";
-  #COLOR_MAIN_DARK = "69";
-  #COLOR_MAIN_DARKER = "68";
+  COLOR_MAIN = "75";
+  COLOR_MAIN_DARK = "69";
+  COLOR_MAIN_DARKER = "68";
 
   COLOR_ALT_LIGHT = "141";
-  #COLOR_ALT = "135";
-  #COLOR_ALT_DARK = "99";
+  COLOR_ALT = "135";
+  COLOR_ALT_DARK = "99";
   COLOR_ALT_DARKER = "97";
 
-  #COLOR_OK = "119";
+  COLOR_OK = "119";
   COLOR_WARN = "221";
 in{
   programs.zsh.enable = true;
@@ -85,6 +85,19 @@ in{
 
     initContent = 
       let initExtraFirst = lib.mkOrder 500 ''
+        COLOR_MAIN_LIGHT=${COLOR_MAIN_LIGHT};
+        COLOR_MAIN=${COLOR_MAIN};
+        COLOR_MAIN_DARK=${COLOR_MAIN_DARK};
+        COLOR_MAIN_DARKER=${COLOR_MAIN_DARKER};
+
+        COLOR_ALT_LIGHT=${COLOR_ALT_LIGHT};
+        COLOR_ALT=${COLOR_ALT};
+        COLOR_ALT_DARK=${COLOR_ALT_DARK};
+        COLOR_ALT_DARKER=${COLOR_ALT_DARKER};
+
+        COLOR_OK=${COLOR_OK};
+        COLOR_WARN=${COLOR_WARN};
+
         # Init for P10k
         source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
         # Init for PATH

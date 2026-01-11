@@ -105,6 +105,12 @@
           IconURL = "https://github.com/favicon.ico";
         }
         {
+          Name = "GitHub Code";
+          Alias = "@ghc";
+          URLTemplate = "https://github.com/search?type=code&q={searchTerms}";
+          IconURL = "https://github.com/favicon.ico";
+        }
+        {
           Name = "Nix Packages";
           Alias = "@nxp";
           URLTemplate = "https://search.nixos.org/packages?channel=unstable&query={searchTerms}";

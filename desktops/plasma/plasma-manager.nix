@@ -113,7 +113,7 @@ in{
       iconTheme = "Papirus-Dark";
       wallpaperSlideShow = { 
         path = "/home/shared/wallpapers/"; 
-        interval = 600;
+        interval = 86400;
       };
       splashScreen.theme = "Lagtrain";
       windowDecorations = {
@@ -140,7 +140,7 @@ in{
         showMediaControls = true;
         wallpaperSlideShow = { 
           path = "/home/shared/wallpapers/"; 
-          interval = 86400;
+          interval = 600;
         };
       };
     };
@@ -195,10 +195,6 @@ in{
         ];
       }
     ];
-
-    session = {
-      sessionRestore.restoreOpenApplicationsOnLogin = "whenSessionWasManuallySaved";
-    };
 
     configFile = {
       baloofilerc."Basic Settings"."Indexing-Enabled" = false;

@@ -4,7 +4,7 @@
 }:{
   imports = [
     ./plasma-manager.nix
-    ./sddm
+    ../ly
   ];
 
   # Enable the KDE Plasma Desktop Environment.
@@ -36,6 +36,7 @@
     kdePackages.ktimer
     kdePackages.kwallet
     kdePackages.kwalletmanager
+    kdePackages.kwallet-pam
     kdePackages.partitionmanager
   ];
 }

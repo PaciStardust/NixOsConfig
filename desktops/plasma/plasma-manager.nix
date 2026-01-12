@@ -166,7 +166,7 @@ in{
         ];
       };
 
-      borderlessMaximizedWindows = false;
+    borderlessMaximizedWindows = false;
       tiling.padding = 0; # used to be 4?
     };
 
@@ -174,6 +174,8 @@ in{
       {
         location = "bottom";
         floating = true;
+        hiding = "autohide";
+
         widgets = [
           {
             kickoff = {
@@ -199,8 +201,17 @@ in{
     configFile = {
       baloofilerc."Basic Settings"."Indexing-Enabled" = false;
 
-      krunnerrc."Plugins/Favorites" = {
-        plugins = "krunner_sessions,krunner_services,krunner_systemsettings";
+      krunnerrc = {
+        "Plugins/Favorites".plugins = "krunner_sessions,windows,krunner_services,krunner_systemsettings";
+        Plugins = {
+          helprunnerEnabled = false;
+          krunner_appstreamEnabled = false;
+          krunner_dictionaryEnabled = false;
+          krunner_katesessionsEnabled = false;
+          krunner_konsoleprofilesEnabled = false;
+          krunner_kwinEnabled = false;
+          krunner_webshortcutsEnabled = false;
+        };
       };
 
       kdeglobals.General.AccentColor = "30,111,233";

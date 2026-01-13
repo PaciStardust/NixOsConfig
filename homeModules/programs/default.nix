@@ -1,0 +1,23 @@
+{
+  imports = [
+    ./bitwarden.nix
+    ./blender.nix
+    ./discord.nix
+    ./firefox.nix
+    ./foot.nix
+    ./heroic.nix
+    ./krita.nix
+    ./libreoffice.nix
+    ./obs-studio.nix
+    ./obsidian.nix
+    ./orca-slicer.nix
+    ./parsec.nix
+    ./prismlauncher.nix
+    ./signal.nix
+    ./spotify.nix
+    ./tuta.nix
+    ./unity.nix
+    ./vlc.nix
+    ./vscode.nix
+  ];
+}

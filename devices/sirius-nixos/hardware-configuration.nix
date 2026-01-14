@@ -26,7 +26,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices = [ ];
+  swapDevices = [{
+    device = "/dev/disk/by-partuuid/460fb8a3-fa9d-46aa-a7d9-bdb4dca5cbc3";
+    randomEncryption.enable = true; 
+  }];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

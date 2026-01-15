@@ -76,6 +76,7 @@
       man-pages
       microcode-amd
       neovim
+      ntfs3g
       p7zip
       powertop
       power-profiles-daemon

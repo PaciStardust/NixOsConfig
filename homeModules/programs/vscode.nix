@@ -11,6 +11,16 @@
       enable = true;
       mutableExtensionsDir = false;
 
+      package = pkgs.vscode.fhsWithPackages (
+        ps: with ps; [
+        stdenv.cc.cc
+        fontconfig
+        libxrandr
+        libICE
+        libX11
+        libSM
+      ]);
+
       profiles.default = {
         enableUpdateCheck = true;
 
@@ -105,8 +115,8 @@
           {
             name = "vscode-sshfs";
             publisher = "kelvin";
-            version = "1.26.1";
-            sha256 = "WO9vYELNvwmuNeI05sUBE969KAiKYtrJ1fRfdZx3OYU=";
+            version = "1.27.0";
+            sha256 = "Fc35SCMNEzql9in4cKocPjNDgvKGFnrV+QDBdO1SmGs=";
           }
           {
             name = "discord-vscode";
@@ -147,32 +157,26 @@
           {
             name = "vscode-nuget-gallery";
             publisher = "patcx";
-            version = "1.2.4";
-            sha256 = "QzUroAVMqvIf71LrfFKzg7bpj61hZZZxWXLvLFjNL58=";
+            version = "1.2.6";
+            sha256 = "v2RX81kkyilZlGlq06tWc2yuwv9i2lbILo6YDMwCAVw=";
           }
           {
             name = "vscode-avalonia";
             publisher = "avaloniateam";
-            version = "0.0.32";
-            sha256 = "2OpZOltD+4i9tUmk0tTDDdEEhffCvHMAQ6BcsA+2Ou8=";
-          }
-          {
-            name = "avalonia-templates";
-            publisher = "addy2142";
-            version = "2.0.1";
-            sha256 = "avizgdDxWxNLsQzQLy/ZtnZ6zCOcDojuq94Fk3UQvgw=";
+            version = "12.2.2";
+            sha256 = "oZu0s9twZ/KXgazOuJrkr8t5uswRVqkJu1snUD63tk8=";
           }
           {
             name = "sqlite-viewer";
             publisher = "qwtel";
-            version = "25.12.2";
-            sha256 = "KxVHIi1obeXaPR8cZhExvRHNV1DyDyphuGyd8R1ee28=";
+            version = "26.9.1";
+            sha256 = "0/EW76Pe0LY6w7kfWX0Ka0kvPbMvNySsUj2pfdfHrdA=";
           }
           {
             name = "vscode-conventional-commits";
             publisher = "vivaxy";
-            version = "1.27.0";
-            sha256 = "yZ3pVBJGcwSNlN7LvFppAuNomxlQDTvA42kUpsZLj7Y=";
+            version = "1.31.0";
+            sha256 = "3HCybDoM4jk/A9xMeu9vNvdwGempP3azG1nqPNQemJ4=";
           }
         ];
       };

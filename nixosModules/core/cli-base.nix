@@ -67,6 +67,7 @@
       docker
       docker-compose
       fd
+      fontconfig
       fzf
       git
       htop
@@ -103,7 +104,7 @@
 
     services.openssh = {
       enable = true;
-      banner = "Mrow?";
+      settings.Banner = toString (pkgs.writeText "OpenSshBanner" "Mrow?");
       ports = [
         13579
       ];

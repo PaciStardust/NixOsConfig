@@ -5,7 +5,7 @@
   {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    lanzaboote.url = "github:nix-community/lanzaboote/v1.0.0";
+    lanzaboote.url = "github:nix-community/lanzaboote";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager/master";
@@ -24,8 +24,6 @@
     home-manager,
     ...
   } @ inputs:
-  let
-  in
   {
     nixosConfigurations.sirius-nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };

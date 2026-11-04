@@ -110,6 +110,12 @@
           github.vscode-github-actions
           github.vscode-pull-request-github
           codezombiech.gitignore
+          ms-python.vscode-pylance
+          ms-python.python
+          ms-python.debugpy
+          ms-python.black-formatter
+          ms-python.vscode-python-envs
+          oderwat.indent-rainbow
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

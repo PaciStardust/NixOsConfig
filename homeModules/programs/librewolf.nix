@@ -3,10 +3,10 @@
   lib, 
   ...
 }:{
-  options.strdst-programs.firefox.enable = lib.mkEnableOption "STRDST Firefox";
+  options.strdst-programs.librewolf.enable = lib.mkEnableOption "STRDST Librewolf";
   
-  config = lib.mkIf config.strdst-programs.firefox.enable {
-    programs.firefox = {
+  config = lib.mkIf config.strdst-programs.librewolf.enable {
+    programs. = {
       enable = true;
 
       policies = {
@@ -40,12 +40,6 @@
         };
 
         ExtensionSettings = {
-          "uBlock0@raymondhill.net" = {
-            installation_mode = "force_installed";
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-            default_area = "navbar";
-            private_browsing = true;
-          };
           "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
             installation_mode = "force_installed";
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";

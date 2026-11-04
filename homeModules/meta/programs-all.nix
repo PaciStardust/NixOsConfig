@@ -13,7 +13,7 @@
     strdst-programs.bitwarden.enable = true;
     strdst-programs.blender.enable = true;
     strdst-programs.discord.enable = true;
-    strdst-programs.firefox.enable = true;
+    strdst-programs.librewolf.enable = true;
     strdst-programs.foot.enable = true;
     strdst-programs.heroic.enable = true;
     strdst-programs.krita.enable = true;

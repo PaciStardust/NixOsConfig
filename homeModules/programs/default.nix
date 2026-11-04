@@ -3,7 +3,7 @@
     ./bitwarden.nix
     ./blender.nix
     ./discord.nix
-    ./firefox.nix
+    ./librewolf.nix
     ./foot.nix
     ./heroic.nix
     ./krita.nix

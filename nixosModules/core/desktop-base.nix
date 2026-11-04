@@ -19,8 +19,9 @@
 
     # Configure keymap in X11
     services.xserver.xkb = {
-      layout = "de";
-      variant = "";
+      layout = "us";
+      variant = "altgr-intl";
+      model = "pc105";
     };
 
     # Enable sound with pipewire.

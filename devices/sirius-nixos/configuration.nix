@@ -46,6 +46,7 @@
     strdst-shells.zsh.enable = true;
     
     # strdst-desktop-tweaks.plasma-manager.enable = true;
+    strdst-desktop-tweaks.gnome.enable = true;
 
     strdst-meta.cli-all.enable = true;
     strdst-meta.services-all.enable = true;

@@ -25,11 +25,17 @@
     environment.systemPackages = with pkgs; [
       gnomeExtensions.blur-my-shell
       gnomeExtensions.caffeine
-      gnomeExtensions.tiling-shell
       gnomeExtensions.appindicator
       gnomeExtensions.just-perfection
-      gnomeExtensions.live-lock-screen
       gnomeExtensions.vitals
+      gnomeExtensions.wallpaper-slideshow
+
+      # Themes the app titlebars
+      qadwaitadecorations
+      qadwaitadecorations-qt6
+      # Themes the apps
+      qgnomeplatform
+      qgnomeplatform-qt6
     ];
   };
 }

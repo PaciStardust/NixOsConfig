@@ -130,7 +130,7 @@
     # networking.firewall.enable = false;
 
     # --- minimise old generations ---
-    boot.loader.systemd-boot.configurationLimit = 20;
+    boot.loader.systemd-boot.configurationLimit = 3;
     nix.gc = {
       automatic = true;
       dates = "weekly";

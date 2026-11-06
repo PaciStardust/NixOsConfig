@@ -14,7 +14,8 @@
   config = lib.mkIf config.strdst-meta.setup-desktop-preferred.enable {
     strdst-core.secure-boot.enable = true;
     strdst-core.desktop-base.enable = true;
-    strdst-displaymanagers.ly.enable = true;
-    strdst-desktops.plasma.enable = true;
+    # strdst-displaymanagers.ly.enable = true;
+    # strdst-desktops.plasma.enable = true;
+    strdst-desktops.gnome.enable = true;
   };
 }

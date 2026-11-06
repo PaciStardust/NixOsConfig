@@ -43,6 +43,7 @@ in{
         clr = "clear";
         cat = "bat";
         cd = "z";
+        wokefetch = "hyfetch";
       };
 
       history = {

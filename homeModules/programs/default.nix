@@ -12,6 +12,7 @@
     ./obsidian.nix
     ./orca-slicer.nix
     ./parsec.nix
+    ./photostuff.nix
     ./prismlauncher.nix
     ./signal.nix
     ./spotify.nix

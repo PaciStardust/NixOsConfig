@@ -6,7 +6,7 @@
   options.strdst-programs.librewolf.enable = lib.mkEnableOption "STRDST Librewolf";
   
   config = lib.mkIf config.strdst-programs.librewolf.enable {
-    programs. = {
+    programs.librewolf = {
       enable = true;
 
       policies = {

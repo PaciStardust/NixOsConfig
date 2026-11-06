@@ -28,6 +28,8 @@
       gnomeExtensions.tiling-shell
       gnomeExtensions.appindicator
       gnomeExtensions.just-perfection
+      gnomeExtensions.live-lock-screen
+      gnomeExtensions.vitals
     ];
   };
 }

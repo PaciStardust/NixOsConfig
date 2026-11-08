@@ -7,15 +7,6 @@
   
   config = lib.mkIf config.strdst-desktop-tweaks.gnome.enable {
     dconf.settings = {
-      "org/gnome/desktop/background" = {
-        color-shading-type = "solid";
-        picture-options = "zoom";
-        picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/map-l.svg";
-        picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/map-d.svg";
-        primary-color = "#3a76c5";
-        secondary-color = "#000000";
-      };
-
       "org/gnome/desktop/input-sources" = {
         mru-sources = [ (lib.hm.gvariant.mkTuple ["xkb" "us+altgr-intl"]) ];
         sources = [ (lib.hm.gvariant.mkTuple ["xkb" "us+intl"]) ];
@@ -110,6 +101,7 @@
         slideshow-queue-reshuffle-on-complete = true;
         slideshow-slide-duration = (lib.hm.gvariant.mkTuple [0 30 0]);
         slideshow-use-absolute-time-for-duration = true;
+        # slideshow-pause = false;
       };
 
       "org/gnome/shell/extensions/caffeine" = {

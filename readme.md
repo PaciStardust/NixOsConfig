@@ -11,3 +11,4 @@
    - Syncthing
    - Wallpapers
    - Config for Signal and Darktable
+   - Fonts

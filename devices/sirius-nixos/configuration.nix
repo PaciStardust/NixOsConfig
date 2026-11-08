@@ -23,7 +23,7 @@
     shell = pkgs.zsh;
   };
 
-  strdst-meta.setup-laptop-preferred.enable = true;
+  strdst-meta.setup-desktop-preferred.enable = true;
   strdst-meta.global-programs-all.enable = true;
   strdst-meta.package-groups-all.enable = true;
 

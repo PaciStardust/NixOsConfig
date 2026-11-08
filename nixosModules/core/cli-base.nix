@@ -88,10 +88,23 @@
       zoxide
     ];
 
-    # TuneD and Powertop for power management
-    services.tuned.enable = true;
-    powerManagement.powertop = {
-      enable = true;
+    # # TuneD and Powertop for power management
+    # services.tuned.enable = true;
+    # powerManagement.powertop = {
+    #   enable = true;
+    # };
+
+    services.power-profiles-daemon.enable = false;
+    services.auto-cpufreq.enable = true;
+    services.auto-cpufreq.settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
     };
 
     # Some programs need SUID wrappers, can be configured further or are

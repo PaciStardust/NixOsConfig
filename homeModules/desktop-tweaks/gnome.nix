@@ -29,7 +29,7 @@
       };
 
       "org/gnome/desktop/peripherals/touchpad" = {
-        click-methods = "areas";
+        click-method = "areas";
         disable-while-typing = false;
         edge-scrolling-enabled = false;
         natural-scroll = false;

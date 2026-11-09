@@ -176,7 +176,7 @@
             name = "sqlite-viewer";
             publisher = "qwtel";
             version = "26.9.1";
-            sha256 = "0/EW76Pe0LY6w7kfWX0Ka0kvPbMvNySsUj2pfdfHrdA=";
+            sha256 = "AENEAycdg+6uCuFk/Tz1XyVvvKEiZ6UEJfw7RU+cSlI=";
           }
           {
             name = "vscode-conventional-commits";

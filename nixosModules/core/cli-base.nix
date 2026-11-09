@@ -43,9 +43,6 @@
       LC_TIME = "en_GB.UTF-8";
     };
 
-    # Configure console keymap
-    console.keyMap = "de";
-
     # Enable CUPS to print documents.
     services.printing.enable = false;
 
@@ -130,7 +127,7 @@
     # networking.firewall.enable = false;
 
     # --- minimise old generations ---
-    boot.loader.systemd-boot.configurationLimit = 3;
+    boot.loader.systemd-boot.configurationLimit = 8;
     nix.gc = {
       automatic = true;
       dates = "weekly";

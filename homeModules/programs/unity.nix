@@ -9,7 +9,7 @@
   config = lib.mkIf config.strdst-programs.unity.enable {
     home.packages = with pkgs; [ 
       unityhub
-      alcom
+      # alcom
     ];
   };
 }

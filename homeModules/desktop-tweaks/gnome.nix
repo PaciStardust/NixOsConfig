@@ -125,6 +125,19 @@
         show-temperature = false;
         show-voltage = false;
       };
+
+      "/org/gnome/nautilus/icon-view" = {
+        default-zoom-level = "small-plus";
+      };
+
+      "/org/gtk/gtk4/settings/file-chooser" = {
+        show-hidden = true;
+      };
+
+      "/org/gnome/nautilus/preferences" = {
+        show-delete-permanently = true;
+        date-time-format = "detailed";
+      };
     };
   };
 }

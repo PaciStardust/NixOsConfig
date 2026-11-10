@@ -1,6 +1,7 @@
 {
   config, 
   lib, 
+  pkgs,
   ...
 }:{
   options.strdst-desktop-tweaks.gnome.enable = lib.mkEnableOption "STRDST Gnome Personalized";
@@ -18,7 +19,10 @@
         color-scheme = "prefer-dark";
         enable-animations = true;
         enable-hot-corners = true;
-        "show-battery-percentage" = true;
+        show-battery-percentage = true;
+        locate-pointer = true;
+        font-antialiasing = "rgba";
+        font-hinting = "full";
       };
 
       "org/gnome/desktop/peripherals/mouse" = {
@@ -59,7 +63,7 @@
 
       "org/gnome/settings-daemon/plugins/power" = {
         idle-dim = true;
-        power-button-action = "suspend";
+        power-button-action = "interactive";
         power-saver-profile-on-low-battery = true;
         sleep-inactive-ac-timeout = 900;
         sleep-inactive-ac-type = "suspend";
@@ -87,7 +91,6 @@
           "steam.desktop"
           "org.gnome.Nautilus.desktop"
         ];
-        last-selected-power-profile = "power-saver";
       };
 
       "org/gnome/shell/app-switcher" = {
@@ -138,6 +141,52 @@
         show-delete-permanently = true;
         date-time-format = "detailed";
       };
+
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = "appmenu:minimize,maximize,close";
+      };
+
+      "org/gnome/desktop/wm/keybindings" = {
+        switch-windows = [ 
+          "<Alt>Tab" 
+        ];
+        switch-windows-backward = [
+          "<Shift><Alt>Tab"
+        ];
+        switch-applications = [ ];
+        switch-applications-backward = [ ];
+        close = [
+          "<Alt>F4"
+        ];
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys" = {
+        custom-keybindings = [
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal/"
+          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/files/"
+        ];
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal" = {
+        binding = "<Super>t";
+        command = "${pkgs.lib.getExe config.programs.foot.package}";
+        name = "Open a terminal";
+      };
+
+      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/files" = {
+        binding = "<Super>e";
+        command = "${pkgs.lib.getExe pkgs.nautilus} -w";
+        name = "Launch a file explorer";
+      };
+
+      "org/gnome/settings-daemon/plugins/housekeeping" = {
+        donation-reminder-enabled = false;
+      };
+
+      "org/gnome/calendar" = {
+        active-view = "week";
+      };
+
     };
   };
 }

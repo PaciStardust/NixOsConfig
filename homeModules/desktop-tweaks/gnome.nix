@@ -126,15 +126,15 @@
         show-voltage = false;
       };
 
-      "/org/gnome/nautilus/icon-view" = {
+      "org/gnome/nautilus/icon-view" = {
         default-zoom-level = "small-plus";
       };
 
-      "/org/gtk/gtk4/settings/file-chooser" = {
+      "org/gtk/gtk4/settings/file-chooser" = {
         show-hidden = true;
       };
 
-      "/org/gnome/nautilus/preferences" = {
+      "org/gnome/nautilus/preferences" = {
         show-delete-permanently = true;
         date-time-format = "detailed";
       };

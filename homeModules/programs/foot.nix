@@ -10,7 +10,7 @@
       enable = true;
 
       settings = {
-        colors.alpha = 0.75;
+        colors-dark.alpha = 0.80;
         main.font = "JetBrainsMono:size=10";
       };
     };

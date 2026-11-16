@@ -60,9 +60,8 @@
       cron
       curl
       clamav
+      compose
       dnsmasq
-      docker
-      docker-compose
       fd
       fontconfig
       fzf

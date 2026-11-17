@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ... 
 }:{
   imports =
@@ -45,4 +46,17 @@
   };
 
   strdst-global-programs.docker.enable = true;
+
+  boot.blacklistedKernelModules = [
+    "nova_core"
+    "nouveau"
+  ];
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    nvidiaSettings = true;
+    open = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }

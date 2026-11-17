@@ -8,10 +8,10 @@
   config = lib.mkIf config.strdst-global-programs.docker.enable {
     virtualisation.docker = {
       enable = true;
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
+      # rootless = {
+      #   enable = true;
+      #   setSocketVariable = true;
+      # };
     };
   };
 }

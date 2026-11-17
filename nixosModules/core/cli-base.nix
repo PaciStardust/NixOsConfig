@@ -61,6 +61,7 @@
       curl
       clamav
       dnsmasq
+      exiftool
       fd
       fontconfig
       fzf

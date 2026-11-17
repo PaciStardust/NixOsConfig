@@ -10,7 +10,7 @@
 
   networking.hostName = "sol";
 
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "26.11"; # Did you read the comment?
 
   users.users.paci = {
     isNormalUser = true;
@@ -31,15 +31,17 @@
   };
 
   home-manager.users.paci = {
-    home.stateVersion = "25.11";
+    home.stateVersion = "26.11";
 
     imports = [
       ../../homeModules
     ];
 
     strdst-shells.zsh.enable = true;
-
     strdst-meta.cli-all.enable = true;
+
+    strdst-cli.git.user-name = "PaciStardust";
+    strdst-cli.git.user-mail = "git@paci.dev";
   };
 
   strdst-global-programs.docker.enable = true;

@@ -37,5 +37,12 @@
         ./devices/sirius-nixos/configuration.nix
       ];
     };
+    nixosConfigurations.sol = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
+      modules = [
+        home-manager.nixosModules.home-manager
+        ./devices/sol/configuration.nix
+      ];
+    };
   };
 }

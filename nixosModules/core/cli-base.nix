@@ -60,7 +60,6 @@
       cron
       curl
       clamav
-      compose
       dnsmasq
       fd
       fontconfig

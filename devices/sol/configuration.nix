@@ -56,7 +56,15 @@
   hardware.nvidia = {
     modesetting.enable = true;
     nvidiaSettings = true;
-    open = true;
+    open = false;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+  environment.systemPackages = with pkgs; [
+    cudaPackages.cudatoolkit
+  ];
 }

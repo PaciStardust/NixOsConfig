@@ -13,6 +13,11 @@
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
+  # Hopefully fixes the RAM
+  boot.kernelParams = [
+    "memmap=0x8$0x41ed18320,0x8$0x41ed1bb48"
+  ];
+
   fileSystems = {
     "/" = { 
       device = "/dev/mapper/luks-main";

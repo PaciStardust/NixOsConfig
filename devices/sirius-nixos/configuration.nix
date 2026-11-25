@@ -11,9 +11,7 @@
   ];
 
   networking.hostName = "sirius-nixos";
-  # Load KMS early like arch
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  boot.kernelModules = [ "amdgpu" ];
+  strdst-core.amd.enable = true;
 
   system.stateVersion = "25.11"; # Did you read the comment?
 
@@ -28,14 +26,6 @@
   strdst-meta.setup-desktop-preferred.enable = true;
   strdst-meta.global-programs-all.enable = true;
   strdst-meta.package-groups-all.enable = true;
-
-  strdst-global-shells.zsh.enable = true;
-
-  virtualisation.vmVariant = {
-    virtualisation.memorySize = 16384;
-    virtualisation.cores = 8;
-    virtualisation.diskSize = 100000;
-  };
 
   home-manager.users.paci = {
     home.stateVersion = "25.11";

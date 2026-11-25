@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ... 
 }:{
   imports =
@@ -10,6 +9,7 @@
   ];
 
   networking.hostName = "sol";
+  strdst-core.nvidia.enable = true;
 
   system.stateVersion = "26.11"; # Did you read the comment?
 
@@ -22,14 +22,6 @@
   };
 
   strdst-meta.setup-server-preferred.enable = true;
-
-  strdst-global-shells.zsh.enable = true;
-
-  virtualisation.vmVariant = {
-    virtualisation.memorySize = 16384;
-    virtualisation.cores = 8;
-    virtualisation.diskSize = 100000;
-  };
 
   home-manager.users.paci = {
     home.stateVersion = "26.11";
@@ -47,21 +39,6 @@
 
   strdst-global-programs.docker.enable = true;
 
-  boot.blacklistedKernelModules = [
-    "nova_core"
-    "nouveau"
-  ];
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia-container-toolkit.enable = true;
-  hardware.nvidia = {
-    modesetting.enable = true;
-    nvidiaSettings = true;
-    open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
-  hardware.opengl = {
-    enable = true;
-  };
   environment.systemPackages = with pkgs; [
     cudaPackages.cudatoolkit
   ];

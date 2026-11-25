@@ -17,5 +17,6 @@
     # strdst-displaymanagers.ly.enable = true;
     # strdst-desktops.plasma.enable = true;
     strdst-desktops.gnome.enable = true;
+    strdst-global-shells.zsh.enable = true;
   };
 }

@@ -154,6 +154,12 @@
         colmena;
     }) ];
 
+    virtualisation.vmVariant = {
+      virtualisation.memorySize = 16384;
+      virtualisation.cores = 8;
+      virtualisation.diskSize = 100000;
+    };
+
     nix.package = pkgs.lixPackageSets.stable.lix;
   };
 }
